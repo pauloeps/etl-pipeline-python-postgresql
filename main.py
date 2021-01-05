@@ -4,9 +4,8 @@ import create_db as db
 import pandas as pd
 
 # Asks for the password
-password='123456'
-#password = getpass('Please enter the password for the superuser (postgres): ')
-#db.create(password)
+password = getpass('Please enter the password for the superuser (postgres): ')
+db.create(password)
 
 #Connecting to database
 engine = create_engine('postgres://postgres:'+password+'@localhost:5432/org_data', echo=False)
